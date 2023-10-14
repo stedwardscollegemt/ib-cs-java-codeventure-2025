@@ -23,7 +23,7 @@ The `JAVA PROJECTS` view allows you to manage your libraries and code bundles. M
 
 ## Java In Two Semesters
 
-I personally find that [this book](https://link.springer.com/book/10.1007/978-3-319-99420-8) offers a clear structure for learning in which each chapter maps onto one week of a twelve week semester, with the chapter content mapping on to a two hour lecture. Each chapter has a set of learning outcomes which are almost identical to IB's assessment statements. There are good self-test tutorial questions, and practical lab tasks which you can do <u>in your own time</u>.
+I personally find that [this book](https://link.springer.com/book/10.1007/978-3-319-99420-8) offers a clear structure for learning in which each chapter maps onto one week of a twelve week semester, with the chapter content mapping on to a two hour lecture. Each chapter has a set of learning outcomes which are almost identical to IB's assessment statements. There are good self-test tutorial questions, and practical lab tasks which you can do <u>in your own time</u>. I do share my digital copy [here](https://drive.google.com/file/d/1__HThQ-lmUrSt99PtFGQ537Z4pYxAj9t/view?pli=1).
 
 ## IB Learning Outcomes
 
