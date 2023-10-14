@@ -4,6 +4,7 @@ package chapter01;
  * My first class my first object is called FirstStep.
  * I will learn about classes later, but for now I will
  * create a class in each lesson to organise my code.
+ * I am writing my first comment.
  */
 public class FirstStep {
 
@@ -18,6 +19,8 @@ public class FirstStep {
         System.out.println("Let this program tell you about myself.");
         System.out.println("\n");
         
-        // TODO: Write output statements to display information about yourself
+        // Write output statements to display information about yourself
+        System.out.println("Name:      Erika Briffa nee Camilleri");
+        System.out.println("Fave food: Spaghetti Bolognese");
     }
 }
