@@ -26,10 +26,12 @@ public class BuildingBlocks {
         // Display "Qty: 10"
         System.out.println("Qty: " + appleQty);
         
-        // TODO: Declare a variable named amountDue and assign it to appleUnitPrice * appleQty
+        // Declare a variable named amountDue and assign it to appleUnitPrice * appleQty
+        double amountDue = appleUnitPrice * appleQty;
         
-        // TODO: Display "Amount due: $<amountDue>"
-        
+        // Display "Amount due: $<amountDue>"
+        System.out.println("Amount due: " + amountDue);
+
         System.out.println("------------------------------------------------------------------------------------------");
 
         // Declaring a variable of data type float and assigning a value
