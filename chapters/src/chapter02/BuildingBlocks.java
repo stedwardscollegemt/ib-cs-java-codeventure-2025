@@ -8,7 +8,8 @@ public class BuildingBlocks {
     public static void main(String[] args) {
 
         // 2.5
-        // TODO: Declare and assign a constant for NO_OF_WEEK_DAYS
+        // Declare and assign a constant for NO_OF_WEEK_DAYS
+        final int NO_OF_WEEK_DAYS = 7;
 
 
         // 2.2, 2.3, 2.4, 2.6
