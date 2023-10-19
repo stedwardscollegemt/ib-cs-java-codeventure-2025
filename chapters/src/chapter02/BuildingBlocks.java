@@ -36,18 +36,22 @@ public class BuildingBlocks {
 
         // Declaring a variable of data type float and assigning a value
         float temperature = 2.4f;
-        // TODO: Increase the temperature by 5.7 degrees celcius
+        // Increase the temperature by 5.7 degrees celcius
+        temperature = temperature + 5.7f; // using + for addition
         
         // Display "Temperature: <temperature> degrees celcius"
         System.out.println("Temperature: " + temperature + " degrees celcius");
         System.out.println("------------------------------------------------------------------------------------------");
 
-        // TODO: Declaring a variable of data type double and assigning a value
+        // Declaring a variable called balance of data type double and assigning a value
+        double balance = 10.50;
+
+        // Decrease the balance by 4.95 dollars
+        balance = balance - 4.95;
         
-        // TODO: Decrease the balance by 4.95 dollars
-        
-        // TODO: Display "Account Balance: $<balance>"
-        
+        // Display "Account Balance: $<balance>"
+        System.out.println("Account Balance: $" + balance); // using + to join text with variables
+
         System.out.println("------------------------------------------------------------------------------------------");
 
         // Declaring a variable of data type char and assigning a value
