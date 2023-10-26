@@ -11,7 +11,6 @@ public class BuildingBlocks {
         // Declare and assign a constant for NO_OF_WEEK_DAYS
         final int NO_OF_WEEK_DAYS = 7;
 
-
         // 2.2, 2.3, 2.4, 2.6
         // The following data types are also referred to as "primitive data types"
 
