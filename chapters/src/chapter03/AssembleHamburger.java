@@ -74,5 +74,7 @@ public class AssembleHamburger {
         } else {
             System.out.println("You seem undecided... maybe go for pizza!");
         }
+
+        input.close();
     }
 }

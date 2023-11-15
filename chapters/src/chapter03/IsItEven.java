@@ -33,5 +33,7 @@ public class IsItEven {
             // After div by 2, rem is 1, so odd
             System.out.println("odd");
         }
+
+        input.close();
     }
 }

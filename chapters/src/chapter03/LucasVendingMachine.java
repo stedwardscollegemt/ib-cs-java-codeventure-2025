@@ -70,5 +70,6 @@ public class LucasVendingMachine {
       default: 
           System.out.println("Thats not on the menu silly");
     }
+    input.close();
   }
 }
