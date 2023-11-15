@@ -17,33 +17,53 @@ public class LucasVendingMachine {
 
     // TODO: Format the menu nicely, with a price list
     System.out.println("Here is our menu:");
-    System.out.println("1: Chips");
-    System.out.println("2: Coke");
-    System.out.println("3: Canned air"); // TODO: Consistent UI Canned Air
-    System.out.println("4: Toasted Salmon");
-    System.out.println("5: Electrified Beef");
-    System.out.println("6: My hopes and dreams"); // TODO: My Hopes n Dreams
-    System.out.println("7: Undercooked chicken");
-    // TODO: Title this "A Harsh Truth"
-    System.out.println("8: The crushing realisation that well never be able to live our lives to the fullest, as we are chained to our self imposed obligations from society, only to eventually die and be raplaced");
-    System.out.println("9: Gum");
+    System.out.println("1: Chips --------------------- 3.50");
+    System.out.println("2: Coke ---------------------- 2.60");
+    System.out.println("3: Canned Air ---------------- 1.23");
+    System.out.println("4: Toasted Salmon ------------ 9.50");
+    System.out.println("5: Electrified Beef ---------- 9.50");
+    System.out.println("6: My Hopes n Dreams --------- 9.57");
+    System.out.println("7: Undercooked Chicken ------- 4.50");
+    System.out.println("8: A Harsh Truth ------------- FREE");
+    System.out.println("9: Gum ----------------------- 0.75");
     
     Scanner input = new Scanner(System.in);
     System.out.println("Please choose your snack :D");
     int number = input.nextInt();
 
-    // TODO: The user must agree to make the purchase by confirming the right amount
+    // The user must agree to make the purchase by confirming the right amount
+    System.out.println("Please confirm your purchase by typing in the amount you will pay");
+    double price = input.nextDouble();
+
+    // Declare a variable for change
+    double change = 0;
 
     switch(number) {
       case 1:
-        // TODO: if the user paid the correct amount then serve, otherwise error out
-        System.out.println("Enjoy your extra crunch chips :D");
+        if (price >= 3.50) {
+          // calculate change
+          change = price - 3.50;
+          System.out.println("Enjoy your extra crunch chips :D");
+          if (change > 0) {
+            System.out.println("Here is your change: " + change);
+          }
+        } else {
+          System.out.println("Here is a single chip for you. Get out!");
+        }
         break;
       case 2:
-        System.out.println("Enjoy the fizzy feeling :D");
+        if (price >= 2.60) {
+          System.out.println("Enjoy the fizzy feeling :D");
+        } else {
+          System.out.println("Fine, here is your Pepsi.");
+        }
         break;
       case 3:
-        System.out.println("Tastes like..... air");
+        if (price >= 1.23) {
+          System.out.println("Tastes like... air.");
+        } else {
+          System.out.println("Go and suffocate.");
+        }
         break;
       case 4:
         System.out.println("Something smells.... Fishy");
