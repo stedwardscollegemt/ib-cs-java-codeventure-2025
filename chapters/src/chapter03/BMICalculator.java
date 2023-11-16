@@ -1,11 +1,25 @@
 package chapter03;
 
+import java.util.Scanner;
+
 public class BMICalculator {
     public static void main(String[] args) {
 
-        // TODO: Display a title for your BMI Calculator
+        // Display a title for your BMI Calculator
+        System.out.println("******************************");
+        System.out.println("**** BMI Calculator Intro ****");
+        System.out.println("******************************");
 
-        // TODO: Ask the user to input their personal details (height in m, weight in kg)
+        // Ask the user to input their personal details (height in m, weight in kg)
+        Scanner input = new Scanner(System.in);
+
+        // Enter height
+        System.out.println("Please enter your height in m: ");
+        double heightIn = input.nextDouble();
+
+        // Enter weight
+        System.out.println("Please enter your weight in kg: ");
+        double weightIn = input.nextDouble();
 
         // TODO: Use the input values to calculate the BMI
         // bmi = weight / (m * m)
