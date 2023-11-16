@@ -21,9 +21,17 @@ public class BMICalculator {
         System.out.println("Please enter your weight in kg: ");
         double weightIn = input.nextDouble();
 
-        // TODO: Use the input values to calculate the BMI
-        // bmi = weight / (m * m)
+        // Use the input values to calculate the BMI
+        // bmi = kg / (m * m)
+        double bmi = weightIn / (heightIn * heightIn);
 
-        // TODO: if bmi < 18.5 then "Underweight" etc...
+        // if bmi < 18.5 then "Underweight" etc...
+        if (bmi < 18.5) {
+            System.out.println("Your BMI is: " + bmi + ", this means Underweight.");
+        } else if (bmi >= 18.5 && bmi <= 24.9) {
+            System.out.println("Your BMI is: " + bmi + ", this means Healthy.");
+        } else {
+            System.out.println("Your BMI is: " + bmi + ", this means Overweight.");
+        }
     }
 }
