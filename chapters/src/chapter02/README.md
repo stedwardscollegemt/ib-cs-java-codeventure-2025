@@ -1,8 +1,9 @@
 # Building Blocks
 
 ## IB Learning Outcomes
+
 - D.1.9 Explain the need for different data types to represent data items
-- 4.3.6 Define: variable, constant, operator, object
+- 4.3.6 Define: variable, constant, and operator
 - 4.3.7 Define operators: mod, div
 - 4.3.8 Use of variables, constants and operators in algorithms
   
@@ -39,7 +40,7 @@ int points = 10;
 
 ## 2.3, 2.5 Constants
 
-A *constant* is a variable whose value cannot change once it has been assigned. We normally declare constants to store pieces of data that is not configurable like the number of days in a week, or the value of pi. Using constants for these special data items makes your code more readable. Declaring a constant is very similar to declaring a variable but we must use a keyword `final` at the beginning of the statement:
+A *constant* is a variable whose value cannot change once it has been assigned. We normally declare constants to store pieces of data that are not configurable like the number of days in a week, or the value of pi. Using constants for these special data items makes your code more readable. Declaring a constant is very similar to declaring a variable but we must use a keyword `final` at the beginning of the statement:
 
 ```
 final double PI = 3.141592653589793238;

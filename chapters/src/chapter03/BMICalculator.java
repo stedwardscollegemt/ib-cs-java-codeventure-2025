@@ -33,5 +33,7 @@ public class BMICalculator {
         } else {
             System.out.println("Your BMI is: " + bmi + ", this means Overweight.");
         }
+
+        input.close();
     }
 }
