@@ -27,11 +27,26 @@ public class NineLives {
         while(lives > 0 && isWordGuessed == false) {
             
             // Display a clue to the user
-            System.out.println("Hint: _ _ _ _ _ _ _");
+            System.out.println("You have " + lives + " lives left! ");
+
+            // Depending on the number of lives, display a different hint
+            if (lives >= 7) {
+                System.out.println("Hint: _ _ _ _ _ _ _");
+            } else if (lives >= 4 && lives <= 6) {
+                System.out.println("Hint: c _ _ _ _ _ _");
+            } else {
+                System.out.println("Hint: c _ _ _ _ _ _ [It smells very fishy and has whiskers!]");
+            }
 
             // Guess a word or a letter
             System.out.println("Have a guess...");
             String guess = Keyboard.readString();
+
+            // Strings are objects in Java, and we will discuss objects in more detail
+            // in future lessons. For now, use the code without understanding.
+            if (guess.equals(word)) {
+                isWordGuessed = true;
+            }
 
             // Remove a life so that eventually the while loop will come to a stop
             lives = lives - 1;
