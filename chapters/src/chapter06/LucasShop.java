@@ -19,13 +19,13 @@ public class LucasShop {
         int[] productQtys = new int[9];
 
         // a variable to keep track of total spent
-        int totalSpent = 0;
+        double totalSpent = 0;
 
         // welcome message
         System.out.println("Welcome to my shop. You spend as much as you want... as long as you spend it!");
         // user instruction
         System.out.println("Please insert balance: \n\n");
-        int balance = input.nextInt();
+        double balance = input.nextDouble();
 
         // display the products and set the prices for them
         System.out.println("Have a look at our products:");
@@ -33,5 +33,26 @@ public class LucasShop {
         // product one is stored at the 0th index
         System.out.println("1: Couch: $1,500");
         productPrices[0] = 1500.00;
+
+        // todo: for the rest of the products (1 - 8)
+
+        while (balance > 0) {  
+            System.out.println("Balance = $" + balance);
+            System.out.println("Please choose an number, or type 10 to leave");
+            int number = input.nextInt();
+
+            switch(number) {
+                case 1: {
+                    // to access a value in an array we use [ ] and specify the position/index
+                    if (balance >= productPrices[0]) {
+                        System.out.println("Comfy Couch Comes Caring Cooly.");
+                        balance = balance - productPrices[0];
+                        productPrices[0] = productPrices[0] + 1;
+                        totalSpent = totalSpent + productPrices[0];
+                    } else System.out.println("Couches Can't Come Carelessly.");
+                    break;
+                }
+            }
+        }
     }
 }
