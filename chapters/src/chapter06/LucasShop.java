@@ -47,7 +47,7 @@ public class LucasShop {
                     if (balance >= productPrices[0]) {
                         System.out.println("Comfy Couch Comes Caring Cooly.");
                         balance = balance - productPrices[0];
-                        productPrices[0] = productPrices[0] + 1;
+                        productQtys[0] = productQtys[0] + 1;
                         totalSpent = totalSpent + productPrices[0];
                     } else System.out.println("Couches Can't Come Carelessly.");
                     break;
