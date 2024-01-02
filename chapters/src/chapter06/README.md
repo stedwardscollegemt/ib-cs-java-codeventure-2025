@@ -1,6 +1,6 @@
 # Arrays
 
-An array is a data structure enables us to organise data of a *similar* nature (same data type) so that our algorithms can be flexible and efficient. An array is a contiguous block of memory, of a pre-determined size, that can store a *collection* of data of the *same* data type.
+An array is a data structure enables us to organise data of a *similar* nature (same data type) so that our algorithms can be flexible and efficient. An array is a *contiguous block of memory* of a pre-determined size, that can store a *collection* of data of the *same data type* ordered by an *index*.
 
 ![](https://qph.fs.quoracdn.net/main-qimg-6dcb98b78005a9af064fc4f0e8fbc19e)
 
@@ -127,7 +127,7 @@ temperatures.length; // gives you 15
 
 ## 6.4, 6.6 Passing arrays to methods and returning them
 
-We recently learned about methods allowing us to write programs into "blocks" or "drawers" of logic. 
+In Chapter 5 we learned about methods allowing us to organise our code into "blocks" or "drawers" of logic. 
 
 Methods can receive whole arrays as a parameter (input).
 
