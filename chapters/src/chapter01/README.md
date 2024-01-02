@@ -56,7 +56,7 @@ System.out.println("Hello, world!");
 
 * Java is case-sensitive.
 * Must declare just one main method as indicated above.
-* Every statement we write in java must end with a semi-colon `;` .
+* Every statement we write in Java must end with a semi-colon `;` .
 * Text meant to be outputted is surrounded by double quotes `" "`.
 
 ### FAQ

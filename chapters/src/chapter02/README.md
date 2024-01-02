@@ -9,7 +9,7 @@
   
 ## 2.2 Primitive/Simple Data Types in Java
 
-We need our programs to store and manipulate data so it becomes valuable information. We are surrounded by different kinds of data, therefore Java allows us to easily classify various data into different types:
+We need our programs to store and manipulate data efficiently so that it becomes valuable information. We are surrounded by different kinds of data, therefore Java allows us to easily classify various data into different types:
 
 - `int` is short for `Integer` and can store whole numbers e.g. 1, 2, -4
 - `float` is short for floating-point and can store real numbers within a specific range e.g 0.1, 0.005, 6.7
