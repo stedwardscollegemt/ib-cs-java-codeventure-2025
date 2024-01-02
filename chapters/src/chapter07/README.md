@@ -12,10 +12,14 @@ It is finally time to really get into Object-Oriented Programming, and discover 
 
 ## 7.3 Objects
 
-You need to understand two fundamental facts...
+We have covered the broad definition of an object in Topic 4. Here is a snippet to refresh your memory.
 
-- A class is a template that defines the form of an object.
-- An object is a particular instance of a class.
+![image](https://github.com/stedwardscollegemt/ib-cs-java-codeventure-2025/assets/14978900/ba575655-8119-435d-bd95-783b9d6b5cf2)
+
+However, in Java, you need to understand two fundamental facts:
+
+- A `class` is a template that defines the form of an object in terms of data and behaviour.
+- An object is a particular instance of a class that has a unique memory reference, unique data values, and makes use of its behaviour to change state during program execution.
 
 >[!IMPORTANT]
 >The class is a *logical abstraction* and does not really take memory space during program execution. It is only until instances have been created (as concrete representations) that we start to consume memory. 
