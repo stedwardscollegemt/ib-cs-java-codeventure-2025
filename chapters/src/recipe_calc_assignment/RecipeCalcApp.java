@@ -15,25 +15,31 @@ public class RecipeCalcApp {
     public static Recipe[] recipes = new Recipe[20];
 
     public static void main(String[] args) {
+
         // we are calling this method first to load data
         // do not remove this
         init();
 
-        int selection = -1;
+        // we have no recipe selected right now
+        int selection = 0; 
+
+        recipes[0].displayExcerpt();
+
+        // trying to print recipe info
 
         // TODO: declare a boolean variable for nextPage and set it to true
 
         // TODO: declare an int variable for page and set it to 1
 
-        // TODO: while nextPage is true and selection is equal to -1
+        // TODO: while nextPage is true and selection is equal to 0
         
-            // TODO: a for loop to display recipe excerpts between page - 1 and page + 4
+            // TODO: a for loop to display recipe excerpts on a page
 
             // TODO: update page variable
 
             // TODO: if page is equal to 5 then nextPage is updated to false 
 
-            // TODO: ask user to select recipe, or -1 for next page
+            // TODO: ask user to select recipe, or '+' for next page
 
             if (selection > 0) {
                 
