@@ -2,6 +2,11 @@ package chapter06;
 
 import java.util.Scanner;
 
+/**
+ * We are refactoring LucasShop from Chapter 5 so that now
+ * product records are stored in parallal arrays.
+ * A very simple example unrelated to shop: https://youtu.be/xn3Xa-frLJ8 
+ */
 public class LucasShop {
     
     public static void main(String[] args) {
@@ -52,7 +57,22 @@ public class LucasShop {
                     } else System.out.println("Couches Can't Come Carelessly.");
                     break;
                 }
+                // todo: rest of the cases (2 - 9)
+                case 10: {
+                    balance = 0;
+                }
             }
         }
+
+        // display the receipt
+        System.out.println("Thank you for buying at Luca's shop :D");
+        System.out.println("Here's your  receipt:");
+        System.out.println(productQtys[0] + "@Couches: $" + (productPrices[0] * productQtys[0]));
+        // todo: rest of the products (1 - 8)
+        System.out.println("======================================");
+        System.out.println("Total: $" + totalSpent);
+
+        // close resources
+        input.close();
     }
 }
