@@ -29,13 +29,16 @@ public class Recipe {
     
     public boolean containsAnyIngredient(String[] search) {
         
-        // TODO: Declare an int variable for index
+        // Declare an int variable for index
+        int index = 0;
 
-        // TODO: while index is less than search.length
+        while (index < search.length) {
 
-        //      if (containsIngredient(search[index]) { return true; }
+            if (containsIngredient(search[index])) { return true; }
         
-        //      TODO: increment index by 1
+            //  increment index by 1
+            index++;
+        }
 
         return false;
     }
