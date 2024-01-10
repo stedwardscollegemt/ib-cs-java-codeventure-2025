@@ -27,13 +27,17 @@ public class RecipeCalcApp {
 
         // trying to print recipe info
 
-        // TODO: declare a boolean variable for nextPage and set it to true
+        // declare a boolean variable for nextPage and set it to true
+        boolean nextPage = true;
 
         // TODO: declare an int variable for page and set it to 1
 
-        // TODO: while nextPage is true and selection is equal to 0
+        while(nextPage == true && selection == 0) {
         
-            // TODO: a for loop to display recipe excerpts on a page
+            // a for loop to display recipe excerpts on a page
+            for (int i = 0; i < 20; i++) {
+                // TODO: get the recipe object at index i, and display excerpt
+            }
 
             // TODO: update page variable
 
@@ -51,7 +55,8 @@ public class RecipeCalcApp {
 
                 selectedRecipe.displayRecipe(false);
             }
-        
+        }
+
         // TODO: outside of while loop create a graceful exit for the user
     }
 
