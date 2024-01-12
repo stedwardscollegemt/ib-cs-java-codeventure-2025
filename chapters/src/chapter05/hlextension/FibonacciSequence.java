@@ -3,10 +3,18 @@ package chapter05.hlextension;
 public class FibonacciSequence {
 
     public static void main(String[] args) {
-        int n = 4;
+        System.out.println("----------------------");
+        System.out.println("The Fibonacci Sequence");
+        System.out.println("----------------------");
+        
+        int n = 7;
+        int start = 0;
 
-        int nthTerm = fibo(n);
-        System.out.println("The " + n + "th term is " + nthTerm);
+        while (start <= n) {
+            int nthTerm = fibo(start);
+            System.out.println("The " + start + "th term is " + nthTerm + ".");
+            start++;
+        }
     }
 
     public static int fibo(int n) {
