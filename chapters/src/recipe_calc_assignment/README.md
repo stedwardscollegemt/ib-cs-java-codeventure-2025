@@ -39,4 +39,5 @@ Assignments tend to have a bad rep because of the pressure that comes with them 
 
 ## Deadline
 
-Thursday 25th January 2024
+~~Thursday 25th January 2024~~
+12th February 2024
