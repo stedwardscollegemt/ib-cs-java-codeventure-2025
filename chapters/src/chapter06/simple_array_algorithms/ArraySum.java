@@ -27,12 +27,11 @@ public class ArraySum {
 
         // use a for loop to calculate the sum
         int sum = 0;
-        for (int i = 0; i < numbers.length; i++) {
-            sum = sum + numbers[i];
+        for (index = 0; index < numbers.length; index++) {
+            sum = sum + numbers[index]; // recurring total
         }
 
         // display the sum
         System.out.println("The sum is: " + sum);
     }
-    
 }
