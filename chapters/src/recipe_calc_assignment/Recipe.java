@@ -16,6 +16,11 @@ public class Recipe {
     String[] method;
 
     // ------ Actions --------------------------------------------
+    /**
+     * This is an implementation of the linear search.
+     * @param search
+     * @return
+     */
     public boolean containsIngredient(String search) {
         int index = 0;
         while (index < ingredients.length) {
@@ -28,18 +33,13 @@ public class Recipe {
     }
     
     public boolean containsAnyIngredient(String[] search) {
-        
         // Declare an int variable for index
         int index = 0;
-
         while (index < search.length) {
-
             if (containsIngredient(search[index])) { return true; }
-        
             //  increment index by 1
             index++;
         }
-
         return false;
     }
     
