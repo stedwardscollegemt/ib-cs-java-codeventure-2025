@@ -1,6 +1,6 @@
 package chapter07.soldier_example;
 
-public class Solider {
+public class Soldier {
 
     // ----- Data ---------------------------------------
 
@@ -18,5 +18,8 @@ public class Solider {
 
 
     // ----- Actions ------------------------------------
+    public void reduceHealth(int damage) {
+        health = health - damage;
+    }
     
 }

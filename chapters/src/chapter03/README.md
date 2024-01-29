@@ -26,6 +26,20 @@ if (/* boolean logic goes here (hello again topic 2) */) {
 }
 ```
 
+Here is an example from `AssembleHamburger.java`
+
+```java
+// Ask the user if they want to assemble a hamburger
+System.out.println("Do you want to assemble a burger? (y/n)");
+char response = input.next().charAt(0);
+
+// 
+if (response == 'y' || response == 'Y') {
+    System.out.println("Great, let us help you build a delicious hamburger...");
+}
+```
+
+
 ## 3.4 The IF ... ELSE statement
 
 ```java

@@ -23,6 +23,8 @@ for(int i = 1; i <= rep; i++) {
 }
 ```
 
+An easy way to look at `for` loops is climbing up or down the stairs. 
+
 ## 4.3 While Loop
 
 Sometimes, repetition which is not fixed is required. In such cases a for loop is not very useful. However, the `while` loop offers non-fixed iteration.

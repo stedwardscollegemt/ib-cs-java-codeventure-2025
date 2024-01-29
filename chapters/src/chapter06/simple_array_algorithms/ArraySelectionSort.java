@@ -10,12 +10,12 @@ public class ArraySelectionSort {
 
         int n = myNumbers.length;
 
-        // TODO: find the bug in this section
+        // find the bug in this section
         for (int i = 0; i < n-1; i++) {
             int minIndex = i;
             for (int j = i+1; j < n; j++) {
                 if (myNumbers[j] < myNumbers[minIndex]) {
-                    minIndex = i;
+                    minIndex = j;
                 }
             }
 
