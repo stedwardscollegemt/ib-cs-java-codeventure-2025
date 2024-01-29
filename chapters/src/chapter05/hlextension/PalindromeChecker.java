@@ -8,11 +8,7 @@ public class PalindromeChecker {
         
         String wordOddLength = "aba";
 
-        System.out.println(checkPalindrome(wordOddLength, 0));
-        System.out.println(checkPalindrome(wordEvenLength, 0));
-
         System.out.println(checkPalindrome("Erika", 0));
-
 
     }
 
@@ -20,10 +16,7 @@ public class PalindromeChecker {
 
         // these are the base cases
         if (word.length() == 1 || pos == (word.length() / 2)) {
-            return true;
-        }
-
-        if (word.length() % 2 == 1 && (word.length() - 1 - pos) <= word.length() / 2) {
+            System.out.println("[INFO] Base case 1 reached : Either the word is of length 1 or No more comparisons.");
             return true;
         }
 
@@ -32,10 +25,12 @@ public class PalindromeChecker {
         char b = word.charAt((word.length() - 1 - pos));
 
         if (a != b) {
+            System.out.println("[INFO] Base case 2 reached: Comparison failure.");
             return false;
         }
 
         // recursive case (self method call)
+        System.out.println("[INFO] Recursive case for " + word + ": Reached pos " + (pos + 1));
         return checkPalindrome(word, (pos + 1));
     }
 }
