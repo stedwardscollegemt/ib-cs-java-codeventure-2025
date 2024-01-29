@@ -9,6 +9,19 @@ It is finally time to really get into Object-Oriented Programming, and discover 
 - D.1.1 Outline the general nature of an object.
 - D.1.2 Distinguish between an object instance and a class.
 - D.3.4 Describe the use of primitive data types and the reference class string.
+- D.3.8 Construct code related to arrays.
+  
+## 7.2 Classes as Data Types
+
+So far you have been using data types such as `char`, `int` and `double`. These are *primitive* data types that hold a single piece of information. Java allows us to create our own data types based on these. Think for exampleof a... 
+
+- `Book` which might have a title, an author, an ISBN number and a price.
+- `Student` which might have a name, a student id and marks for various subjects.
+
+Built-in types like `char` and `int` can only hold a single piece of information only, therefore, completely inadequate for holding all the necessary information
+about a complex real-world entity like `Book` or a `Student`. So far, we have used the parallel arrays technique to get around this issue. In this Chapter, we will create our own types that can store many pieces of data.
+
+The choice of data type for our data times depends on the nature of the data and the operations that need to be performed on it. As we have learned in Chapter 2, data types help programmers use memory efficiently. Different types have different ranges of values or precision. Having types makes our class more readable e.g., we know that `price` stores a real number and so, can be manipulated using arithmetic operators.
 
 ## 7.3 Objects
 
@@ -92,16 +105,39 @@ But don't worry too much about this point because we will be diving into OOP slo
 
 ## 7.6 Strings
 
-Java treats a data like `"Ms. Camilleri"` which we refer to as <b>text</b> as an object that is composed of a collection (array) of characters or bytes (recall that a single ASCII character can be represented in a byte). 
+Java treats a data like `"Ms. Camilleri"` which we refer to as <b>text</b> as an object that is composed of a sequence of characters or bytes (recall that a single ASCII character can be represented in a byte which is 8 bits exactly). 
 
-For textual data, Java offers a powerful utility class (template) called `String`. To store textual data in memory then you need to instasiate a `new` object like so:
+For textual data, Java offers a powerful utility `String` class. Technically, to store a *blank* piece of textual data in memory then you need to instasiate a `new` object like so:
 
 ```java
 String myName = new String(); // very similar to our soldier example
 ```
 
-## Some tips
+## 7.10 Arrays of Objects
 
-- A class should define one and only one logical entity. Putting a lot of unrelated information in a single object goes against the principle.
-- Object classes should not declare the `main()` method. You should always have a separate class to declare the entry point of your program.
-- Have another class to create object instances. This could be the class that has the `main()` defined but not necessary.
+In Chap. 6 you learnt how to create arrays of simple types such as ``int` and `char`. We have even created arrays of the reference type `String`. Even though it feels like `String` is a built-in data type, it is actually an object. The creators of the Java language went out of their way to make it easy for us to create and use these variables, but make no mistake, a `String` is indeed an object. As you create your own data types, then you also are empowered to create arrays of objects. 
+
+```java
+Book myLibrary = new Book[50];
+```
+
+Be aware that this line of code does not create fifty `Book` instances, but, it reserves fifty *unique memory references*. You can think of these unique memory references as empty slots that could eventally store all of your `Book` objects. 
+
+The good news is that assigning array values is not difficult, and you will find that it is similar to what we have done before.
+
+```java
+   // creating a Book instance to store in the array	
+   myLibrary[0] = new Book();
+
+	// an alternative to the above
+	Book myBook = new Book();
+	myLibrary[1] = myBook;
+```
+
+Now, `myLibrary[1]` can be treated as an object variable. Anything you have done with `int` arrays e.g., searching algorithms, minimum, maximum, etc., can be done with object arrays. 
+
+## General Pro Tips
+
+- A class should represent *one* logical entity.
+- Object classes do not normally declare the `main()` method, therefore, always have a separate class to declare the entry point of your program.
+- Have another class to manage the creation of object instances and at this stage this will likely be the class that has the `main()` defined but not necessary.
