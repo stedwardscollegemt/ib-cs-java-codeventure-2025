@@ -12,8 +12,7 @@ Allows us to instruct the computer to carry out a task over, and over again by r
 
 ## 4.2 For Loop
 
-If we wish to repeat a section of code a fixed number of times (five in the example
-above) we would use Java’s for loop. 
+If we wish to repeat a section of code a fixed number of times (five in the example above) we would use Java’s for loop. 
 
 ```java
 int rep = 5; // number of repetitions
@@ -32,5 +31,15 @@ Sometimes, repetition which is not fixed is required. In such cases a for loop i
 ```java
 while(/* test goes here */) {
     // instruction (s) to be repeated go here
+}
+```
+
+The test that you create is a `boolean` expression in Java which we have learned about in Chapter 3. The simplest example one could thing of is a game - you keep playing until all your lives are lost. It is impossible to tell when exactly that will happen. 
+
+```java
+int lives = 9;
+
+while(lives > 0) {
+    // keep playing
 }
 ```

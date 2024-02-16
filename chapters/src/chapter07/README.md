@@ -4,7 +4,7 @@ All activity in Java happens within a class so technically we have been making u
 
 It is finally time to really get into Object-Oriented Programming, and discover the features that make Java so popular amongst back-end developers. 
 
-# IB Learning Outcomes
+## IB Learning Outcomes
 
 - D.1.1 Outline the general nature of an object.
 - D.1.2 Distinguish between an object instance and a class.
@@ -115,7 +115,7 @@ String myName = new String(); // very similar to our soldier example
 
 ## 7.10 Arrays of Objects
 
-In Chap. 6 you learnt how to create arrays of simple types such as ``int` and `char`. We have even created arrays of the reference type `String`. Even though it feels like `String` is a built-in data type, it is actually an object. The creators of the Java language went out of their way to make it easy for us to create and use these variables, but make no mistake, a `String` is indeed an object. As you create your own data types, then you also are empowered to create arrays of objects. 
+In Chap. 6 you learnt how to create arrays of simple types such as `int` and `char`. We have even created arrays of the reference type `String`. Even though it feels like `String` is a built-in data type, it is actually an object. The creators of the Java language went out of their way to make it easy for us to create and use these variables, but make no mistake, a `String` is indeed an object. As you create your own data types, then you also are empowered to create arrays of objects. 
 
 ```java
 Book myLibrary = new Book[50];
@@ -134,10 +134,4 @@ The good news is that assigning array values is not difficult, and you will find
 	myLibrary[1] = myBook;
 ```
 
-Now, `myLibrary[1]` can be treated as an object variable. Anything you have done with `int` arrays e.g., searching algorithms, minimum, maximum, etc., can be done with object arrays. 
-
-## General Pro Tips
-
-- A class should represent *one* logical entity.
-- Object classes do not normally declare the `main()` method, therefore, always have a separate class to declare the entry point of your program.
-- Have another class to manage the creation of object instances and at this stage this will likely be the class that has the `main()` defined but not necessary.
+Now, `myLibrary[1]` can be treated as an object variable. Anything you have done with `int` arrays e.g., searching algorithms, minimum, maximum, etc., can be done with object arrays.
