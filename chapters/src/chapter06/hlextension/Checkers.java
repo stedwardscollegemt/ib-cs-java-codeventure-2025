@@ -62,7 +62,7 @@ public class Checkers {
             targetCol = currentCol - 1;
         }
 
-        if (isWhiteMoveValid(targetRow, targetCol)) {
+        if (isMoveValid(targetRow, targetCol)) {
             // proceed with the game
             board[targetRow][targetCol] = WHITE;
             board[currentRow][currentCol] = ' ';
@@ -73,7 +73,7 @@ public class Checkers {
 
     }
 
-    public static boolean isWhiteMoveValid(int targetRow, int targetCol) {
+    public static boolean isMoveValid(int targetRow, int targetCol) {
         // make sure indices are not out of bounds
         boolean isWithinBounds = (targetRow < 8 && targetRow >= 0) && (targetCol < 8 && targetCol >= 0);
         boolean isEmpty = board[targetRow][targetCol] != WHITE && board[targetRow][targetCol] != BLACK;
@@ -81,6 +81,20 @@ public class Checkers {
     }
 
     public static void moveBlack(int currentRow, int currentCol, boolean rightFlag) {
+        // todo: some validation
+        int targetRow = currentRow + 1;
+        int targetCol = 0;
 
+        if (rightFlag) {
+            targetCol = currentCol - 1;
+        } else {
+            targetCol = currentCol + 1;
+        }
+
+        if (isMoveValid(targetRow, targetCol)) {
+            // proceed with the game
+            board[targetRow][targetCol] = WHITE;
+            board[currentRow][currentCol] = ' ';
+        }
     }
 }
