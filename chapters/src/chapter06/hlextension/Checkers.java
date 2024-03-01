@@ -29,8 +29,8 @@ public class Checkers {
         moveWhite(4, 1, true);
         displayBoard();
 
-        moveBlack(2, 3, false);
-        displayBoard();
+        // moveBlack(2, 3, false);
+        // displayBoard();
     }
 
     public static void init() {
@@ -105,20 +105,34 @@ public class Checkers {
         int targetCol = 0;
 
         if (rightFlag) {
-            targetCol = currentCol - 1;
-        } else {
             targetCol = currentCol + 1;
+        } else {
+            targetCol = currentCol - 1;
         }
 
         if (isMoveValid(currentRow, currentCol, targetRow, targetCol)) {
             // proceed with the game
-            board[targetRow][targetCol] = WHITE;
+            board[targetRow][targetCol] = BLACK;
             board[currentRow][currentCol] = ' ';
-        } else if (isCapturePossible(currentRow, currentCol, targetRow, targetCol, BLACK)) {
-            // todo: capture white piece
+        } else {
+            targetRow = currentRow + 2;
+            if (rightFlag) {
+                targetCol = currentCol + 2;
+            } else {
+                targetCol = currentCol - 2;
+            }
+            if (isCapturePossible(currentRow, currentCol, targetRow, targetCol, BLACK)) {
+                // capture white piece
+                // step 1.
+                board[targetRow + 1][targetCol + 1] = BLACK;
+                board[currentRow][currentCol] = ' ';
+            }
         }
 
-        // todo: promote piece to King
+        // promote piece to King
+        if (targetRow == 7) {
+            board[targetRow][targetCol] = KING_BLACK;
+        }
     }
 
     public static boolean isMoveValid(int currentRow, int currentCol, int targetRow, int targetCol) {
