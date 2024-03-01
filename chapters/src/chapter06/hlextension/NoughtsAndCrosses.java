@@ -20,9 +20,17 @@ public class NoughtsAndCrosses {
         // display empty grid
         displayGrid();
 
-        // TODO: fill the first row with crosses
+        // fill the first row with crosses
+        grid[0][0] = 'X';
+        grid[0][1] = 'X';
+        grid[0][2] = 'X';
+        displayGrid();
 
-        // TODO: fill the first diagonal with noughts  
+        // fill the first diagonal with noughts  
+        grid[0][0] = 'O';
+        grid[1][1] = 'O';
+        grid[2][2] = 'O';
+        displayGrid();
     }
 
     public static void displayGrid() {
