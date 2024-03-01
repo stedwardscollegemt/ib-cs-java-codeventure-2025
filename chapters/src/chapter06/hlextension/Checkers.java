@@ -12,6 +12,7 @@ public class Checkers {
     static char WHITE = 'W';
     static char KING_BLACK = 'K';
     static char QUEEN_WHITE = 'Q';
+    static int capturedWhite = 0;
     
     public static void main(String[] args) {
         init();
@@ -124,8 +125,14 @@ public class Checkers {
             if (isCapturePossible(currentRow, currentCol, targetRow, targetCol, BLACK)) {
                 // capture white piece
                 // step 1.
-                board[targetRow + 1][targetCol + 1] = BLACK;
+                board[targetRow][targetCol] = BLACK;
                 board[currentRow][currentCol] = ' ';
+                if (rightFlag) {
+                    board[currentRow + 1][currentCol + 1] = ' ';
+                } else {
+                    board[currentRow + 1][currentCol - 1] = ' ';
+                }
+                capturedWhite = capturedWhite + 1;
             }
         }
 
