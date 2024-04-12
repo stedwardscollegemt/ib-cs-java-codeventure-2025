@@ -13,46 +13,45 @@ public class PancakeStack {
     /**
      * --- Attributes (State) -----------------------------
      */
-    int size; // this is a stack attribute
+    final int SIZE = 5; 
 
-    Pancake[] stack = new Pancake[5];
+    Pancake[] stack = new Pancake[SIZE];
+
+    int count; // this is the stack attribute that keeps track of the top pointer
 
     String topping; // this is a pancake attribute
 
     public PancakeStack(String topping) {
         this.topping = topping;
-        this.size = 0;
+        this.count = 0;
     }
 
     /**
      * --- Methods (Behaviour) -----------------------------
      */
-    public void push() {
+    public void push(Pancake p) {
+        // first, we check if it is full, if not, then we can push
         if (!isFull()) {
-            // create the pancake
-            Pancake p = new Pancake();
-            size++;
-            int pos = stack.length - size;
-            stack[pos] = p;
+            stack[count] = p;
+            count++;
         }
     }
 
     public Pancake pop() {
         if(!isEmpty()) {
-            int pos = stack.length - size;
-            Pancake p = stack[pos];
-            stack[pos] = null;
-            size--;
-            return p;
+            Pancake topPancake = stack[count - 1];
+            stack[count - 1] = null;
+            count--;
+            return topPancake;
         }
         return null;
     } 
     
     public boolean isEmpty() {
-        return size == 0;
+        return count == 0;
     }
 
     public boolean isFull() {
-        return size == stack.length;
+        return count == SIZE;
     }
 }

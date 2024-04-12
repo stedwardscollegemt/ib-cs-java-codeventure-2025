@@ -5,13 +5,21 @@ import helpers.Keyboard;
 public class PancakeMain {
     public static void main(String[] args) {
         
-        // todo: instansiate a PancakeStack
+        // instansiate a PancakeStack
+        PancakeStack myPancakeStack = new PancakeStack("Chocolate Spread");
 
-        // todo: ask the user how many pancakes they want, must be between 2 and 5
+        // ask the user how many pancakes they want, must be between 2 and 5
+        System.out.println("How many pancakes do you want?");
+        int numberOfPancakes = Keyboard.readInt();
 
-        // todo: loop between 0 up to not including number, and push
+        // loop between 0 up to number of pancakes, and push
+        for (int i = 0; i < numberOfPancakes; i++) {
+            Pancake p = new Pancake();
+            myPancakeStack.push(p);
+        }
 
-        // todo: confirm to user that pancake stack is ready to eat
+        // confirm to user that pancake stack is ready to eat
+        System.out.println("Your pancakes are ready.");
 
         // ask the user if they now want to eat the pancake
         char response = 'y';
@@ -21,10 +29,11 @@ public class PancakeMain {
     
             if (response == 'y') {
                 System.out.println("Here, have a pancake!");
-                // todo: write code to pop a pancake
-                // todo: write code to eat pancake
+                Pancake p = myPancakeStack.pop();
+                p.eat();
+                System.out.println("You ate your pancake!");
             }
-        } while (response == 'y' /** todo: and stack is not empty */);
+        } while (response == 'y' && !myPancakeStack.isEmpty());
         
         // end the program with a message
         System.out.println("I really hope you enjoyed your pancakes! Come again soon.");
