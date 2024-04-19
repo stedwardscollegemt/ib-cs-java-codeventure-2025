@@ -5,16 +5,20 @@ package chapter05.calculator;
  */
 public class Fridge {
     
-    // variables with preset values
+    /**
+     * --- Data (Member Variables) --------------------------------
+     */
     int watts;
     
     int hoursPerDay;
     
     double kwPerHour;
     
-    public void setKwPerHour() {
-        
+    /**
+     * --- Actions (Member Methods) --------------------------------
+     */
+    public double calcKwPerHour() {
         kwPerHour = (watts / 1000) / hoursPerDay;
+        return kwPerHour;
     }
-    
 }

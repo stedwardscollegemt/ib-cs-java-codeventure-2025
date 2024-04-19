@@ -11,9 +11,11 @@ public class Freezer{
     
     double kwPerHour;
     
-    public void setKwPerHour() {
-        
+    /**
+     * --- Actions (Member Methods) --------------------------------
+     */
+    public double calcKwPerHour() {
         kwPerHour = (watts / 1000) / hoursPerDay;
+        return kwPerHour;
     }
-    
 }

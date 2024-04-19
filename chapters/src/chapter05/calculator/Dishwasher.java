@@ -12,8 +12,8 @@ public class Dishwasher {
     
     double kwPerHour;
     
-    public void setKwPerHour() {
-        
+    public double calcKwPerHour() {
         kwPerHour = (watts / 1000) / hoursPerDay;
+        return kwPerHour;
     }
 }

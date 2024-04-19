@@ -5,7 +5,7 @@ package chapter05.calculator;
  */
 public class UtilityPriceCalculations {
     
-    public static double calc10Mins(int kwPerHour, double pricePerKwHr) {
+    public static double calc10Mins(double kwPerHour, double pricePerKwHr) {
         // todo: the logic of this function
         double kwPer10Minutes = Double.valueOf(kwPerHour) / 6;
         double pricePerKw10Minutes = pricePerKwHr / 6;
@@ -13,21 +13,21 @@ public class UtilityPriceCalculations {
         return price;
     }
 
-    public static double calcPerDay(int kwPerHour, int hoursPerDay, double pricePerKwHr) {
+    public static double calcPerDay(double kwPerHour, int hoursPerDay, double pricePerKwHr) {
         
         // todo: the logic of this function
         double pricePerDay = pricePerKwHr * hoursPerDay;
         return pricePerDay; 
     }
     
-    public static double calcPerMonth(int kwPerHour, int hoursPerDay, double pricePerKwHr) {
+    public static double calcPerMonth(double kwPerHour, int hoursPerDay, double pricePerKwHr) {
         
         double pricePerDay = calcPerDay(kwPerHour, hoursPerDay, pricePerKwHr);
         double pricePerMonth = pricePerDay * 30;
         return pricePerMonth;
     }
     
-    public static double calcPerYear(int kwPerHour, int hoursPerDay, double pricePerKwHr) {
+    public static double calcPerYear(double kwPerHour, int hoursPerDay, double pricePerKwHr) {
         
         double pricePerMonth = calcPerMonth(kwPerHour, hoursPerDay, pricePerKwHr);
         double PricePerYear = pricePerMonth * 12;

@@ -1,76 +1,97 @@
 package chapter05.calculator;
 
-public class ElecricityCalculator {
+import helpers.Keyboard;
 
-    public static void main(String[] args) {
-        
-        // todo: have an array of devices
-        String[] devices = {"Fridge", "Dishwasher", "Television", "Freezer"};
-        
-        // todo: the simple user interface and flow
-        System.out.println("this is a Elecricity Calculator");
+public class ElectricityCalculator {
+
+public static void main(String[] args) {
         boolean again = true;
-        while(again){// todo: ask the user if they want to continue 
-            double Watts;
-            System.out.println("enter the watts");
-            Watts = Keyboard.readDouble();
+         // have an array of devices
+        String[] devices = {"Fridge", "Dishwasher", "Television", "Freezer"};
+
+        double kph = 0;
+        int watts = 0;
+        int hoursPerDay;
+        double kwPerHourPrice;
+        String answer;
+
+        // the simple user interface and flow
+        System.out.println("This is a Elecricity Calculator!");
+        
+        while (again) { // ask the user if they want to continue 
+
+            // ask the user to select a device
+            System.out.println("What device u want to check?");
+            for( int i = 0; i < devices.length; i++){
+                System.out.print( i + ". " + devices[i] + " | ");
+            }
+            answer = Keyboard.readString();
+
+            System.out.println("Enter the watts:");
+            watts = Keyboard.readInt();
             
-            int hoursPerDay;
-            System.out.println("enter the hours u use per day");
+            System.out.println("Enter the hours you use per day:");
             hoursPerDay = Keyboard.readInt();
             
-            double kwPerHourPrice;
-            System.out.println("enter the price for an hour");
+            System.out.println("Enter the price for an hour");
             kwPerHourPrice = Keyboard.readDouble();
             
-            // todo: ask the user to select a device
-            System.out.println("what device u want to check?");
-            for( int i = 0; i < devices.length; i++){
-                System.out.print( i + devices[i]);
-            }
-            String response = Keyboard.readString();
-            if(response.equals("Fridge")){
-                Fridge f = new Fridge(Watts, hoursPerDay);
-                // todo: we call all the methods for the report
-                double kph = f.setKwPerHour();
-                System.out.println(calc10Mins(kph, kwPerHourPrice));
-                System.out.println(calcPerDay(kph, hoursPerDay, kwPerHourPrice));
-                System.out.println(calcPerMonth(kph, hoursPerDay, kwPerHourPrice));
-                System.out.println(calcPerYear(kph, hoursPerDay, kwPerHourPrice));
+            if(answer.equals("Fridge")) {
+                // We created an object instance of the Fridge class
+                Fridge fridgeInstance = new Fridge();
+                fridgeInstance.watts = watts;
+                // We call all the methods for the report
+                kph = fridgeInstance.calcKwPerHour();
+                // Static access to methods via the UtilityPriceCalculations class
+                System.out.println(UtilityPriceCalculations.calc10Mins(kph, kwPerHourPrice));
+                System.out.println(UtilityPriceCalculations.calcPerDay(kph, hoursPerDay, kwPerHourPrice));
+                System.out.println(UtilityPriceCalculations.calcPerMonth(kph, hoursPerDay, kwPerHourPrice));
+                System.out.println(UtilityPriceCalculations.calcPerYear(kph, hoursPerDay, kwPerHourPrice));
                 
             }
-            if(response.equals("Dishwasher")){
-                Dishwasher d = new Dishwasher(Watts, hoursPerDay);
-                // todo: we call all the methods for the report
-                double kph = d.setKwPerHour();
-                System.out.println(calc10Mins(kph, kwPerHourPrice));
-                System.out.println(calcPerDay(kph, hoursPerDay, kwPerHourPrice));
-                System.out.println(calcPerMonth(kph, hoursPerDay, kwPerHourPrice));
-                System.out.println(calcPerYear(kph, hoursPerDay, kwPerHourPrice));
-            }        
-            if(response.equals("Television")){
-                Television t = new Television(Watts, hoursPerDay);
-                // todo: we call all the methods for the report
-                double kph = t.setKwPerHour();
-                System.out.println(calc10Mins(kph, kwPerHourPrice));
-                System.out.println(calcPerDay(kph, hoursPerDay, kwPerHourPrice));
-                System.out.println(calcPerMonth(kph, hoursPerDay, kwPerHourPrice));
-                System.out.println(calcPerYear(kph, hoursPerDay, kwPerHourPrice));
-            }        
-            if(response.equals("Freezer")){
-                Freezer fr = new Freezer(Watts, hoursPerDay);
-                // todo: we call all the methods for the report
-                double kph = fr.setKwPerHour();
-                System.out.println(calc10Mins(kph, kwPerHourPrice));
-                System.out.println(calcPerDay(kph, hoursPerDay, kwPerHourPrice));
-                System.out.println(calcPerMonth(kph, hoursPerDay, kwPerHourPrice));
-                System.out.println(calcPerYear(kph, hoursPerDay, kwPerHourPrice));
+            
+            if(answer.equals("Dishwasher")){
+                Dishwasher dishwasherInstance = new Dishwasher();
+                dishwasherInstance.watts = watts;
+                // We call all the methods for the report
+                kph = dishwasherInstance.calcKwPerHour();
+                // Static access to methods via the UtilityPriceCalculations class
+                System.out.println(UtilityPriceCalculations.calc10Mins(kph, kwPerHourPrice));
+                System.out.println(UtilityPriceCalculations.calcPerDay(kph, hoursPerDay, kwPerHourPrice));
+                System.out.println(UtilityPriceCalculations.calcPerMonth(kph, hoursPerDay, kwPerHourPrice));
+                System.out.println(UtilityPriceCalculations.calcPerYear(kph, hoursPerDay, kwPerHourPrice));
             }
-            System.out.println("Again?");
-            String answer = Keyboard.readString();
+
+            if(answer.equals("Television")){
+                Television televisionInstance = new Television();
+                // We call all the methods for the report
+                televisionInstance.watts = watts;
+                kph = televisionInstance.calcKwPerHour();
+                // Static access to methods via the UtilityPriceCalculations class
+                System.out.println(UtilityPriceCalculations.calc10Mins(kph, kwPerHourPrice));
+                System.out.println(UtilityPriceCalculations.calcPerDay(kph, hoursPerDay, kwPerHourPrice));
+                System.out.println(UtilityPriceCalculations.calcPerMonth(kph, hoursPerDay, kwPerHourPrice));
+                System.out.println(UtilityPriceCalculations.calcPerYear(kph, hoursPerDay, kwPerHourPrice));
+            }        
+            if(answer.equals("Freezer")){
+                Freezer freezerInstance = new Freezer();
+                // We call all the methods for the report
+                freezerInstance.watts = watts;
+                kph = freezerInstance.calcKwPerHour();
+                // Static access to methods via the UtilityPriceCalculations class
+                System.out.println(UtilityPriceCalculations.calc10Mins(kph, kwPerHourPrice));
+                System.out.println(UtilityPriceCalculations.calcPerDay(kph, hoursPerDay, kwPerHourPrice));
+                System.out.println(UtilityPriceCalculations.calcPerMonth(kph, hoursPerDay, kwPerHourPrice));
+                System.out.println(UtilityPriceCalculations.calcPerYear(kph, hoursPerDay, kwPerHourPrice));
+            }
+            
+            System.out.println("Would you like to add another device? (yes/no)");
+            answer = Keyboard.readString();   
             if(answer.equals("no")){
                 again = false;
             }
         }
+
+        System.out.println("Program ended by the user.");
     }
 }
