@@ -7,7 +7,7 @@ public class DiskStack {
      */
     int size = 3; 
 
-    Disk[] tower = new Disk[size];
+    Disk[] tower;
 
     int count; // this is the stack attribute that keeps track of the top pointer
 
@@ -15,6 +15,7 @@ public class DiskStack {
         if (size > this.size) {
             this.size = size;
         }
+        this.tower = new Disk[this.size];
     }
 
     /**
