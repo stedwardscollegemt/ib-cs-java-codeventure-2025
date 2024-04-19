@@ -21,7 +21,8 @@ public class DiskStack {
      * --- Methods (Behaviour) -----------------------------
      */
     public boolean isEmpty() {
-        return count == 0;
+        boolean isEmpty = (count == 0);
+        return isEmpty;
     }
 
     public boolean isFull() {
@@ -50,8 +51,9 @@ public class DiskStack {
         if (!isFull()) {
             // we can ahead and peek
             Disk topDisk = peek();
-            if (topDisk != null && topDisk.size > disk.size) {
-                
+            if (topDisk == null || topDisk.size > disk.size) {
+                tower[count] = disk;
+                count++;
             }
         }
     }
