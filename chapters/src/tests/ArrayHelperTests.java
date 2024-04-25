@@ -24,4 +24,53 @@ public class ArrayHelperTests {
             System.out.print("F");
         }
     }
+
+    public static void testContains() {
+        // set-up
+        int[] testData = {1, 3, 5, 9, 10568};
+        int testValue = 9;
+        boolean expected = true;
+
+        // run the actual method
+        boolean actual = ArrayHelper.contains(testData, testValue);
+
+        // assertion
+        if (expected == actual) {
+            System.out.print(".");
+        } else {
+            System.out.print("F");
+        }
+    }
+
+    public static void testRandomElement() {
+        // set-up
+        int[] testData = {1, 3, 5, 9, 10568};
+        int randomMin = 0;
+        int randomMax = testData.length - 1;
+        
+        // run the actual method
+        int randomIndex = ArrayHelper.randomElement(testData);
+        int randomElement = testData[randomIndex];
+
+        // assertion 1
+        boolean isPass = true;
+        if (randomIndex >= randomMin && randomIndex <= randomMax) {
+            // do nothing
+        } else {
+            isPass = false;
+        }
+
+        // assertion 2
+        if(randomElement == testData[randomIndex]) {
+            // do nothing
+        } else {
+            isPass = false;
+        }
+
+        if (isPass == true) {
+            System.out.print(".");
+        } else {
+            System.out.print("F");
+        }
+    }
 }
