@@ -1,5 +1,8 @@
 package helpers;
 
+import java.util.Date;
+import java.util.Random;
+
 /**
  * This helper class was created by the Year 12s of the year 2021/22 to help
  * people learn about arrays.
@@ -294,6 +297,12 @@ public class ArrayHelper {
     }
 
     public static int randomElement(int[] arr) {
-        return 0;
+        // Create an instance of the Random class, put in the time as a seed
+        Random randomGenerator = new Random((new Date()).getTime());
+        // Use the behaviour defined in the Random class to get a number between 0 and arr.length - 1
+        // We trust this because Java programmers test their code and make sure it works.
+        int randomIndex = randomGenerator.nextInt(arr.length - 1);
+        // return the randomIndex
+        return randomIndex;
     }
 }
