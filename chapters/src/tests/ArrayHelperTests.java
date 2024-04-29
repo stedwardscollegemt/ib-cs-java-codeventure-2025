@@ -7,6 +7,7 @@ public class ArrayHelperTests {
     public static void main(String[] args) {
         System.out.println("****Unit Tests For ArrayHelpers.java****\n");
         testSum();
+        testRandomElement();
     }
 
     public static void testSum() {
@@ -52,6 +53,12 @@ public class ArrayHelperTests {
         int randomIndex = ArrayHelper.randomElement(testData);
         int randomElement = testData[randomIndex];
 
+        // run multiple times
+        int[] actualRolls = new int[testData.length];
+        for(int i = 0; i < actualRolls.length; i++) {
+            actualRolls[i] = ArrayHelper.randomElement(testData);
+        } 
+
         // assertion 1
         boolean isPass = true;
         if (randomIndex >= randomMin && randomIndex <= randomMax) {
@@ -71,6 +78,17 @@ public class ArrayHelperTests {
             System.out.print(".");
         } else {
             System.out.print("F");
+        }
+
+        // assertion 3
+        for (int i = 0; i < actualRolls.length; i++) {
+            for (int j = 1; j < actualRolls.length; j++) {
+                if (actualRolls[i] == actualRolls[j]) {
+                    // do nothing
+                } else {
+                    isPass = false;
+                }
+            }
         }
     }
 }
