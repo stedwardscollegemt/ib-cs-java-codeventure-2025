@@ -113,7 +113,7 @@ public class ArrayHelper {
     }
 
     /**
-     * Finn Cohort 2023
+     * @author Finn Cohort 2023
      * Get the largest value in the array.
      * @param arr
      * @return max
@@ -291,5 +291,9 @@ public class ArrayHelper {
             }
         }
         return -1; // return an impossible value (key not found)
+    }
+
+    public static int randomElement(int[] arr) {
+        return 0;
     }
 }

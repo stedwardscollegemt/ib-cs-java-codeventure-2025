@@ -74,12 +74,6 @@ public class ArrayHelperTests {
             isPass = false;
         }
 
-        if (isPass == true) {
-            System.out.print(".");
-        } else {
-            System.out.print("F");
-        }
-
         // assertion 3
         for (int i = 0; i < actualRolls.length; i++) {
             for (int j = 1; j < actualRolls.length; j++) {
@@ -89,6 +83,12 @@ public class ArrayHelperTests {
                     isPass = false;
                 }
             }
+        }
+
+        if (isPass == true) {
+            System.out.print(".");
+        } else {
+            System.out.print("F");
         }
     }
 }
