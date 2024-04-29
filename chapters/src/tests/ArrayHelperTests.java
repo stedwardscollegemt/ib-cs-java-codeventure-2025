@@ -77,7 +77,7 @@ public class ArrayHelperTests {
         // assertion 3
         for (int i = 0; i < actualRolls.length; i++) {
             for (int j = 1; j < actualRolls.length; j++) {
-                if (actualRolls[i] == actualRolls[j]) {
+                if (actualRolls[i] != actualRolls[j]) {
                     // do nothing
                 } else {
                     isPass = false;
