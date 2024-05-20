@@ -60,6 +60,21 @@ public class RecipeCalcApp {
         // TODO: outside of while loop create a graceful exit for the user
     }
 
+    public static Recipe searchRecipeById(int id) {
+
+        // some version of the linear search
+        // but adding things in
+        int index = 0;
+        while(index < 20) {
+            if (recipes[index].id == id) {
+                Recipe foundRecipe = recipes[index];
+                return foundRecipe;
+            }
+            index = index + 1;
+        }
+        return null;
+    }
+
     /**
      * This is a method that reads a file and creates Recipe instances
      * which are stored in the recipes array. Do not delete this code.
