@@ -14,6 +14,7 @@ The moment OOP becomes complex... it sucks!
 - D.1.10 Describe how data items can be passed to and from actions as parameters.
 - D.2.1, D.2.4 Define the term Encapsulation and Outline Advantages
 - D.3.3 Define the terms: private, protected, public, static.
+- D.4.9 Construct algorithms using a static implementation of a list (HL).
 
 # Advantages and Disadvantages of OOP
 
