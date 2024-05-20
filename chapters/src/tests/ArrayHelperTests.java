@@ -8,6 +8,7 @@ public class ArrayHelperTests {
         System.out.println("****Unit Tests For ArrayHelpers.java****\n");
         testSum();
         testRandomElement();
+        testBubbleSortString();
     }
 
     public static void testSum() {
@@ -89,6 +90,29 @@ public class ArrayHelperTests {
             System.out.print(".");
         } else {
             System.out.print("F");
+        }
+    }
+    
+    public static void testBubbleSortString() {
+        // set-up
+        String[] testData = {"Jay", "Tiange", "Joe", "Luca", "Alessandro", "Mariia", "Alek", "Ivan", "Abdu", "Nik", "Yixi", "Felix"};
+        String[] expectedData = {"Abdu", "Alek", "Alessandro", "Felix", "Ivan", "Jay", "Joe", "Luca", "Mariia", "Nik", "Tiange", "Yixi"};
+
+        // run the actual method
+        String[] actual = ArrayHelper.bubbleSort(testData);
+
+        // assertion
+        boolean notEqual = false;
+        for(int i = 0; i < testData.length; i++) {
+            if (!(expectedData[i].equals(actual[i]))) {
+                notEqual = true;
+            }
+        }
+
+        if (notEqual) {
+            System.out.print("F");
+        } else {
+            System.out.print(".");
         }
     }
 }
