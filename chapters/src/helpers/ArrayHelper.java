@@ -226,6 +226,20 @@ public class ArrayHelper {
         return arr;
     }
 
+    public static String[] bubbleSort(String[] arr) {
+        for(int pass = 0; pass < arr.length - 1; pass++) {
+            for(int current = 0; current < arr.length - 1; current++) {
+                if (arr[current].compareTo(arr[current + 1]) > 0) {
+                    // swap
+                    String temp = arr[current];
+                    arr[current] = arr[current+1];
+                    arr[current+1] = temp;
+                }
+            }
+        }
+        return arr;
+    }
+
     /**
      * Year 12 Cohort 2024 (from video)
      * https://www.youtube.com/watch?v=g-PGLbMth_g 
