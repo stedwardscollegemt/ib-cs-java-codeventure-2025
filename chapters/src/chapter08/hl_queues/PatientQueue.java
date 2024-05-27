@@ -41,5 +41,4 @@ public class PatientQueue {
     public boolean isEmpty() {
         return tail == -1;
     }
-
 }
