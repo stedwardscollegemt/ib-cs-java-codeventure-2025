@@ -2,6 +2,7 @@ package chapter15;
 
 import java.security.Key;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 import helpers.Keyboard;
 
@@ -28,6 +29,16 @@ public class MyFruitBag {
             if (anotherFruit == 'n') {
                 insertFruit = false;
             }
+        }
+
+        // Study guide - be able to go through a collection and put items in an array
+        Fruit[] myFruitArray = new Fruit[myFruitCollection.size()];
+        Iterator<Fruit> iterator = myFruitCollection.iterator();
+        int count = 0;
+        while(iterator.hasNext()) {
+            Fruit nextFruit = iterator.next();
+            myFruitArray[count] = nextFruit;
+            count = count + 1;
         }
 
     }
