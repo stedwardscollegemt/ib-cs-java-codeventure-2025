@@ -44,7 +44,7 @@ All classes in the JCF are in the `java.util package`, so to use the `ArrayList`
 import java.util.ArrayList; 
 ```
 
-# 15.2.3 List Methods
+## 15.2.3 List Methods
 
 The `ArrayList` is an implementation of a `List` contract that was designed by Java developers. We call these contracts *interfaces*. An interface defines how something should behave to process data in a standard way. It abstracts out the complexity of <b>how</b> something is done. The most important thing for us to know is <b>what</b> can be done.
 
@@ -55,7 +55,7 @@ An `ArrayList<Object>` can:
 - check if it `contains(Object)`
 - determine its `size()`
 
-# 15.5.3 Iterator Objects
+## 15.5.3 Iterator Objects
 
 Java developers decided to treat traversal separately in an `Iterator` object which exposes standard operations to retrieve items in a sequential manner. All collection instances have a way for you to use this object. The `ArrayList` is no exception:
 
