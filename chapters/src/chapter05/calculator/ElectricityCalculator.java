@@ -46,8 +46,7 @@ public static void main(String[] args) {
                 System.out.println(UtilityPriceCalculations.calc10Mins(kph, kwPerHourPrice));
                 System.out.println(UtilityPriceCalculations.calcPerDay(kph, hoursPerDay, kwPerHourPrice));
                 System.out.println(UtilityPriceCalculations.calcPerMonth(kph, hoursPerDay, kwPerHourPrice));
-                System.out.println(UtilityPriceCalculations.calcPerYear(kph, hoursPerDay, kwPerHourPrice));
-                
+                System.out.println(UtilityPriceCalculations.calcPerYear(kph, hoursPerDay, kwPerHourPrice));  
             }
             
             if(answer.equals("Dishwasher")){

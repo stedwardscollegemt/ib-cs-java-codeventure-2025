@@ -13,6 +13,11 @@ public class Book {
 
     int currentPage = 0;
 
+    public Book(String titleIn, char coverTypeIn) {
+        title = titleIn;
+        coverType = coverTypeIn;
+    }
+
     /**
      * ---- Member Methods [Actions] ---------------------
      */

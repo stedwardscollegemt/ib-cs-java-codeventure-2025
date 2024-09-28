@@ -1,6 +1,10 @@
 package chapter08.blackjack;
 
 public class Player {
+    
+    // static data
+    static int playerCount = 0;
+    
     /**
      * -------- Data (Attributes) --------------------------
      */
@@ -8,9 +12,18 @@ public class Player {
 
     Chip[] chips;
 
+    String name;
+
     /**
      * -------- Constructor --------------------------
      */
+    public Player() { }
+
+    public Player(String nameIn) {
+        playerCount = playerCount + 1;
+        id = playerCount;
+        name = nameIn;
+    }
 
      /**
      * -------- Methods (Behaviour) --------------------------

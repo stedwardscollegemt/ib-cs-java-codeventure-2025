@@ -11,7 +11,16 @@ public class MyLibrary {
         
         
         // create 10 Book instances for my library
-        Book cSharpBook = new Book();
+        Book cSharpBook = new Book("An Introduction to C#", 'P');
+        Book fSharpBook = new Book("F# to the Stars", 'P');
+
+        // display unique memory reference of my instances
+        System.out.println(cSharpBook);
+        System.out.println(fSharpBook);
+
+        // display the titles of my books
+        System.out.println(cSharpBook.title);
+        System.out.println(fSharpBook.title);
 
         // ask the user to search for a book using the linear search
         
