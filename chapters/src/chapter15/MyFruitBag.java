@@ -1,6 +1,5 @@
 package chapter15;
 
-import java.security.Key;
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -40,7 +39,5 @@ public class MyFruitBag {
             myFruitArray[count] = nextFruit;
             count = count + 1;
         }
-
     }
-    
 }

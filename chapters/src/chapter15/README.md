@@ -16,7 +16,6 @@ Collections are objects that manage a group of similar elements, meaning that th
 
 For IB you simply need to be aware of:
 - `ArrayList`
-- `LinkedList` (HL Only)
 
 # IB Learning Outcomes
 
@@ -25,3 +24,15 @@ For IB you simply need to be aware of:
 - D.4.10 Construct list algorithms using object references.
 - D.4.11 Construct algorithms using the standard library collections included in JETS.
 - D.4.13 Explain the advantages of using library collections. 
+
+## 15.2 The ArrayList Collection
+
+An `ArrayList` is a type of collection which can process an *ordered list* of objects. Such a collection may contain duplicates. Examples may include a series of `PrintJob` waiting for a printer on a first-come-first-served basis, `EmergencyCall` waiting for an ambulance on a priority basis, and the names of `Player` objects that have won the Wimbledon tennis tournament over the last 10 years ordered by year. In each case ordering is important, and repetition may also be required. We often think of this kind of collection as a *sequence of objects*.
+
+### 15.2.1 Creating an ArrayList Collection Object
+
+In our example, we are creating an *ordered list* of `Fruit` in `MyFruitBag`. The `MyFruitBag` class has a `static` attribute called `myFruitCollection` which is an `ArrayList` instance. Inside the `ArrayList` we are storing instances of `Fruit`. When we create an `ArrayList` object we have to specify what *class* of objects we would be storing inside the `<>`.
+
+```java
+    static ArrayList<Fruit> myFruitCollection = new ArrayList<Fruit>();
+```
