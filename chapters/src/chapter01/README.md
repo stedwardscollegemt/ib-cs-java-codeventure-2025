@@ -27,23 +27,27 @@ A program is an ordered sequence of instructions for the computer to execute. An
 
 The first line (the header) looks like this:
 
-```
-public class App
+```java
+public class App {
+   // more code goes here...
+}
 ```
 
 and it is very important to pay attention to the word **class**. This concept is very important in Java because it is an *object-oriented language*. We will get into more detail about what this means later but for now you should understand that all the source code that we write in Java must be in a `public class` and the name of the class must match the filename.
 
-We then move on to write more code within the {}; these tell the compiler (recall from introduction) where a class begins and ends.
+We then move on to write more code within the `{}`; these tell the compiler (recall from introduction) where a class begins and ends.
 
 As our programs become larger and more complex you can imagine that our projects will contain multiple classes therefore multiple files to keep our source code neat and organised. However, *just one* of the classes must declare the `main` method which indicates the beginning of a program.
 
-```
-public static void main(String[] args)
+```java
+public static void main(String[] args) {
+    // we will write some commands here
+}
 ```
 
 Finally let us look at the most exciting bit. The single line of code that actually produces an output! The line below prints out text of our choice on to the console when we **run** our program. 
 
-```
+```java
 System.out.println("Hello, world!");
 ```
 
