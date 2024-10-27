@@ -21,6 +21,7 @@ public class MyFruitBag {
 
             Fruit fruit = new Fruit(name);
 
+            // add is a standard operation in a collection
             myFruitCollection.add(fruit);
 
             System.out.println("Ok, added fruit, would you like another?");
@@ -34,7 +35,9 @@ public class MyFruitBag {
         Fruit[] myFruitArray = new Fruit[myFruitCollection.size()];
         Iterator<Fruit> iterator = myFruitCollection.iterator();
         int count = 0;
+        // hasNext is a standard operation in a collection
         while(iterator.hasNext()) {
+            // next is a standard operation in a collection
             Fruit nextFruit = iterator.next();
             myFruitArray[count] = nextFruit;
             count = count + 1;

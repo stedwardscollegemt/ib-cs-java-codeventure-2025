@@ -22,9 +22,7 @@ For IB you simply need to be aware of:
 - 4.1.18 Explain why abstraction is required in the derivation of computational solutions for a specified situation.
 - 4.2.2 Outline the standard operations on a collection.
 - 4.3.11 Construct algorithms using the access methods of a collection.
-- D.4.7 Identify the features of the abstract data type (ADT) list (HL).
-- D.4.8 Describe applications of lists (HL).
-- D.4.11 Construct algorithms using the standard library collections included in JETS (HL).
+- D.4.11 Construct algorithms using the standard library collections.
 
 ## 15.2 The ArrayList Collection
 
