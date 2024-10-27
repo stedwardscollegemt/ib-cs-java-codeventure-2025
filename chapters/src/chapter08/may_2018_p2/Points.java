@@ -12,7 +12,7 @@ public class Points {
     
     private String statusNextYear;
 
-    private Visit[] allVisits = new Visits[366];
+    private Visits[] allVisits = new Visits[366];
 
     int y;
 
@@ -21,6 +21,8 @@ public class Points {
         bonusPoints = 0;
         y = 0;
         statusNow = "Bronze";
+        Visits firstVisit = allVisits[0];
+        firstVisit.getDays();
     }
 
     public Points(String id, int bp) {
@@ -30,7 +32,38 @@ public class Points {
         statusNow = "Bronze";
     }
 
-    // TODO: All the accessor and mutator methods
+    public String getMemberId() {
+        return memberId;
+    }
+
+    // Write access via a mutator or setter method
+    public void setMemberId(String memberIdIn) {
+         memberId = memberIdIn;
+    }
+
+    public int totalPoints() {
+        return totalPoints;
+    }
+
+    public void setTotalPoints(int totalPointsIn) {
+        totalPoints = totalPointsIn;
+    }
+
+    public int getBonusPoints() {
+        return bonusPoints;
+    }
+
+    public void setBonusPoints(int bonusPointsIn) {
+        bonusPoints = bonusPointsIn;
+    }
+
+    public String statusNow() {
+        return statusNow;
+    }
+
+    public String statusNextYear() {
+        return statusNextYear;
+    }
 
     public Visits getAllVisits(int v) {
         return allVisits[v];
@@ -41,15 +74,31 @@ public class Points {
         y = y + 1;
     }
 
-    isGold() {
-
+    public boolean isGold() {
+        boolean isGold = false;
+        
+        // A String is not a primitive data type
+        // so primitive comparisons like == may not work as expected
+        // always be safe and use String functions like .equals
+        if (statusNow.equals("Gold")) {
+            isGold = true;
+        }
+        
+        return isGold;
     }
 
-    calculateTotalPoints() {
+    public int calculateTotalPoints() {
+        int calcTotalPoints = 0;
 
+
+
+
+
+
+        return calcTotalPoints;
     }
 
-    daysMissing() {
+    // daysMissing() {
 
-    }
+    // }
 }
