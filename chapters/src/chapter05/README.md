@@ -134,4 +134,49 @@ An example with multiple parameters and with a return value.
 ```
 ## 5.6 Variable Scope
 
+In Java, the curly brackets ``{}`` define when a variable scope begins and ends. What is variable scope? Variable scope is how long a variable should live in our program. Some variables are important throughout our program, so their scope should be *global*, however, most of the time, variables are only needed for a small amount of time. 
+
+```java
+    public class MyProgram {
+
+        // Here is the first pair of brackets. If we want variables to live throughout
+        // the lifetime of our program we must declare them here as class variables:
+        static int  myGlobalVariable = 3;
+
+        public static void main(String[] args) {
+            // So far we have always declared and used our variables within these curly brackets
+            // The variables live when main begins, and die when main ends.
+            int myLocalVariable = 5; 
+            
+            
+            myGlobalVariable = myGlobalVariable + myLocalVariable; 
+        }
+    }
+```
+
+For Java to "see" variables they must be declared within a pair of curly brackets, and so, can only be used within them. When a program tries to use a variable out of scope,
+you will get a compiler error. 
+
+```java
+    public class MyProgram {
+
+        // Here is the first pair of brackets. If we want variables to live throughout
+        // the lifetime of our program we must declare them here as class variables:
+        static int  myGlobalVariable = 3;
+
+        public static void main(String[] args) {
+            // So far we have always declared and used our variables within these curly brackets
+            // The variables live when main begins, and die when main ends.
+            int myLocalVariable = 5;
+            myGlobalVariable = myGlobalVariable + myLocalVariable; 
+        }
+
+        public static void displayVariableValues() {
+            // this is ok
+            System.out.println(myGlobalVariable); 
+            // this gives an error because myLocalVariable is only visible within the main {}
+            System.out.println(myLocalVariable); 
+        }
+    }
+```
 
